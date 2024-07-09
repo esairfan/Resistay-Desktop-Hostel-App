@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CA1250F-B8A9-48FF-9E1A-D7877D47DE1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Resistay</RootNamespace>
+    <AssemblyName>Resistay</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="ResistayDll">
+      <HintPath>..\..\ResistayDll\ResistayDll\bin\Debug\ResistayDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\AddRt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddRt.Designer.cs">
+      <DependentUpon>AddRt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AllotmentofRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AllotmentofRoom.Designer.cs">
+      <DependentUpon>AllotmentofRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AllotSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AllotSalary.Designer.cs">
+      <DependentUpon>AllotSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Annoucementform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Annoucementform.Designer.cs">
+      <DependentUpon>Annoucementform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckAnnoucement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckAnnoucement.Designer.cs">
+      <DependentUpon>CheckAnnoucement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckComplain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckComplain.Designer.cs">
+      <DependentUpon>CheckComplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckRules.Designer.cs">
+      <DependentUpon>CheckRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FeesAllotement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FeesAllotement.Designer.cs">
+      <DependentUpon>FeesAllotement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FeesPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FeesPayment.Designer.cs">
+      <DependentUpon>FeesPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HostelManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HostelManage.Designer.cs">
+      <DependentUpon>HostelManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HostelSpecifiedStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HostelSpecifiedStudents.Designer.cs">
+      <DependentUpon>HostelSpecifiedStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LeaveRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LeaveRoom.Designer.cs">
+      <DependentUpon>LeaveRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\LogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LogOut.Designer.cs">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RemoveRtandStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RemoveRtandStudent.Designer.cs">
+      <DependentUpon>RemoveRtandStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Rooms.Designer.cs">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RtMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RtMenu.Designer.cs">
+      <DependentUpon>RtMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ruleform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Ruleform.Designer.cs">
+      <DependentUpon>Ruleform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SalaryReieve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SalaryReieve.Designer.cs">
+      <DependentUpon>SalaryReieve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentComplain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StudentComplain.Designer.cs">
+      <DependentUpon>StudentComplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StudentMenu.Designer.cs">
+      <DependentUpon>StudentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StudentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StudentProfile.Designer.cs">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpdatePassword.Designer.cs">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\AddRt.resx">
+      <DependentUpon>AddRt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AllotmentofRoom.resx">
+      <DependentUpon>AllotmentofRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AllotSalary.resx">
+      <DependentUpon>AllotSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Annoucementform.resx">
+      <DependentUpon>Annoucementform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckAnnoucement.resx">
+      <DependentUpon>CheckAnnoucement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckComplain.resx">
+      <DependentUpon>CheckComplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckRules.resx">
+      <DependentUpon>CheckRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FeesAllotement.resx">
+      <DependentUpon>FeesAllotement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FeesPayment.resx">
+      <DependentUpon>FeesPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HostelManage.resx">
+      <DependentUpon>HostelManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HostelSpecifiedStudents.resx">
+      <DependentUpon>HostelSpecifiedStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LeaveRoom.resx">
+      <DependentUpon>LeaveRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\LogOut.resx">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemoveRtandStudent.resx">
+      <DependentUpon>RemoveRtandStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Rooms.resx">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RtMenu.resx">
+      <DependentUpon>RtMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ruleform.resx">
+      <DependentUpon>Ruleform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SalaryReieve.resx">
+      <DependentUpon>SalaryReieve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StudentComplain.resx">
+      <DependentUpon>StudentComplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StudentMenu.resx">
+      <DependentUpon>StudentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StudentProfile.resx">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdatePassword.resx">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hostel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all student living.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all student living1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List of Paid &amp; Dues Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List of Paid &amp; Dues Students1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rules-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close all jframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
